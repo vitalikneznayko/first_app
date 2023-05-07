@@ -17,23 +17,17 @@ function UserList({ users }) {
 
   return (
     <div className="App">
-      <ol>
-        {users.map((item) => (
-          <li
-            key={item.id}
-            onClick={() => clickElem(item)}
-            className={
-              rel.includes(item.id)
-                ? "blue"
-                : clicked === item.id
-                ? "orange"
-                : ""
-            }
-          >
-            {item.content}
-          </li>
-        ))}
-      </ol>
+      {users.map((item) => (
+        <div
+          key={item.id}
+          onClick={() => clickElem(item)}
+          className={
+            rel.includes(item.id) ? "blue" : clicked === item.id ? "orange" : ""
+          }
+        >
+          {item.content}
+        </div>
+      ))}
     </div>
   );
 }
