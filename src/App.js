@@ -1,5 +1,6 @@
 import "./App.css";
 import TestState from "./components/TestState";
+import UserList from "./components/UserList";
 
 function App() {
   const userList = [
@@ -32,7 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      <TestState users={TestState} />
+      <UserList users={userList} />
     </div>
   );
 }
